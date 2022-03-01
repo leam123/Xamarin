@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jeepney_Codes.MainPage">
+
+    <StackLayout Margin="20" BackgroundColor="#9dc5c3" Background="linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%)">
+        <Label Text="JEEPNEY CODES" 
+               TextColor="GhostWhite"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Entry x:Name="jeepneyCode" 
+               Placeholder="Jeepney Code (i.e. 01A or 01A,03C,06B)"
+               BackgroundColor="#ffffff"
+               Background="linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%)"
+               WidthRequest="250"
+               Margin="10"
+               TextColor="Black"
+               TextTransform="Uppercase"
+               FontAttributes="Bold"
+               FontSize="12"
+               HorizontalOptions="Center" />
+        <Button x:Name="generateRoute" Text="Generate Route" FontAttributes="Bold" CharacterSpacing="5" TextColor="Blue" Clicked="GenerateRoute"/>
+        
+        <Label Text="ROUTES" 
+               TextColor="AntiqueWhite"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Label x:Name="jeepneyRoute"
+               BackgroundColor="#d3d3d3"
+               WidthRequest="250"
+               HeightRequest="180"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="Center"
+               Padding="10"
+               Background="linear-gradient(315deg, #d3d3d3 0%, #eccc68 74%)"
+               TextColor="Black"
+               FontAttributes="Bold"
+               LineBreakMode="WordWrap"
+               HorizontalOptions="Center" />
+
+        <Label Text="List of Jeepney Codes" 
+               TextColor="AntiqueWhite"
+               FontSize="12"
+               Margin="5"
+               HorizontalOptions="Center" />
+        <Label Text="01A 02B 03C 04A 04D 06B 06D 10C 10H 11A 11B 20A 20C 42C 42D"
+               LineBreakMode="WordWrap"              
+               TextColor="AntiqueWhite"
+               FontSize="10"
+               HorizontalOptions="Center" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PagesActivity.ViewModels"
+             x:Class="PagesActivity.Views.EducationBackground">
+    <ContentPage.BindingContext>
+        <local:EducationBackgroundViewModel></local:EducationBackgroundViewModel>
+    </ContentPage.BindingContext>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Elementary" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry Text="{Binding Elementary}" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Year" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry Text="{Binding EYear}" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="High School" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry Text="{Binding HighSchool}" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Year" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry Text="{Binding HYear}" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="4" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="College" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="4" Grid.Column="1" Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry Text="{Binding College}" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="5" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Button Text="Back"
+                    Command="{Binding BackToPersonal}"/>
+        </StackLayout>
+        <StackLayout Grid.Row="5" Grid.Column="1" VerticalOptions="Start" HeightRequest="60">
+            <Button Text="Next" 
+                    Command="{Binding ToSkills}"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

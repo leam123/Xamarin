@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Mazelike"
+             x:Class="Mazelike.MainPage">
+
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="190"/>
+            <RowDefinition />
+            <RowDefinition Height="190"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <BoxView Grid.Row="0" Color="Red" />
+        <BoxView Grid.Row="0" Grid.Column="1" Color="Red" />
+        <BoxView Grid.Row="0" Grid.Column="2" Color="Red" />
+        <BoxView Grid.Row="1" Color="Green" />
+
+        <Grid RowSpacing="0" ColumnSpacing="0" Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.Row="0" Color="Pink" />
+            <BoxView Grid.Row="0" Grid.Column="1" Color="Pink" />
+            <BoxView Grid.Row="1" Color="Orange" />
+            <BoxView Grid.Row="1" Grid.Column="1" Color="PeachPuff" />
+        </Grid>
+
+        <BoxView Grid.Row="1" Grid.Column="2" Color="Blue" />
+        <BoxView Grid.Row="2" Color="Yellow"/>
+        <BoxView Grid.Row="2" Grid.Column="1" Color="Yellow"/>
+        <BoxView Grid.Row="2" Grid.Column="2" Color="Blue"/>
+
+    </Grid>
+
+</ContentPage>

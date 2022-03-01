@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PagesActivity.ViewModels"
+             x:Class="PagesActivity.Views.Summary">
+    <ContentPage.BindingContext>
+        <local:SummaryViewModel></local:SummaryViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Label Text="Basic Info" 
+               TextColor="DarkGreen" 
+               FontAttributes="Bold" 
+               FontSize="18" 
+               HorizontalTextAlignment="Start" 
+               VerticalTextAlignment="Center" 
+               Padding="20"/>
+        <Label x:Name="fullname" TextColor="Black"  FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="birthday" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="gender" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+        <Label Text="Educational Background" 
+               TextColor="DarkBlue" 
+               FontAttributes="Bold" 
+               FontSize="18" 
+               HorizontalTextAlignment="Start" 
+               VerticalTextAlignment="Center" 
+               Padding="20"/>
+        <Label x:Name="elementary" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="highschool" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="college" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+        <Label Text="Skills" 
+               TextColor="DarkGoldenrod" 
+               FontAttributes="Bold" 
+               FontSize="18" 
+               HorizontalTextAlignment="Start" 
+               VerticalTextAlignment="Center" 
+               Padding="20"/>
+        <Label x:Name="skill1" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="skill2" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="skill3" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="skill4" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <Label x:Name="skill5" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+    </StackLayout>
+
+</ContentPage>

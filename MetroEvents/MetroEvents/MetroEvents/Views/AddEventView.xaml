@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MetroEvents.ViewModels"
+             x:Class="MetroEvents.Views.AddEventView">
+
+    <ContentPage.BindingContext>
+        <local:AddEventViewModel></local:AddEventViewModel>
+    </ContentPage.BindingContext>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label Text="Event Name" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry x:Name="name" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Description" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry x:Name="description" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Start Date" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <DatePicker x:Name="startDateTime" MinimumDate="01/01/2021"
+            MaximumDate="12/31/2030"
+            HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="End Date" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <DatePicker x:Name="endDateTime" MinimumDate="01/01/2021"
+            MaximumDate="12/31/2030"
+            HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="4" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Upvotes" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="4" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry x:Name="upvotes" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="5" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Participants" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="5" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry x:Name="participantsCount" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="6" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Type" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="6" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry x:Name="type" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="7" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Label  Text="Status" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="7" Grid.Column="1"  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="Start"  HeightRequest="60" >
+            <Entry x:Name="status" PlaceholderColor="#C7C7C7" HorizontalOptions="End" WidthRequest="240" VerticalOptions="Center" FontSize="18"  TextColor="#C7C7C7" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="8" Grid.Column="0" VerticalOptions="Start" HeightRequest="60">
+            <Button HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Event Lists"
+                    Command="{Binding Back}"/>
+        </StackLayout>
+        <StackLayout Grid.Row="8" Grid.Column="1" VerticalOptions="Start" HeightRequest="60">
+            <Button HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Add Event"
+                    x:Name="Add"
+                    Clicked="AddEvent"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="displayText" FontSize="40" FontAttributes="Bold" BackgroundColor="Black"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap"/>
+
+        <Label x:Name="resultText" Grid.Row="1" FontSize="25" FontAttributes="Bold" BackgroundColor="Black"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap"/>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnPush" Grid.Row="0" Text="M+" 
+                    BackgroundColor="Gray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White"
+                    Clicked="OnPushValue"/>
+            <Button x:Name="btnPop" Grid.Row="0" Grid.Column="1" Text="M-" 
+                    BackgroundColor="Gray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White"
+                    Clicked="OnPopValue"/>
+            <Button x:Name="btnPeak" Grid.Row="0" Grid.Column="2" Text="MR" 
+                    BackgroundColor="Gray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="ShowPeakValue"/>
+            <Button x:Name="btnClear" Grid.Row="0" Grid.Column="3" Text="MC" 
+                    BackgroundColor="Gray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="ClearStack"/>
+
+            <Button Grid.Row="1" Text="1" 
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="2" 
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="3" 
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+
+            <Button x:Name="btnAdd" Grid.Row="1" Grid.Column="3" Text="+" 
+                    BackgroundColor="LightSlateGray" BorderColor="SlateGray" BorderWidth="5"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnOperatorClick"/>
+
+            <Button Grid.Row="2" Text="4"
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="5"
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="6"
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+
+            <Button x:Name="btnMinus" Grid.Row="2" Grid.Column="3" Text="-"
+                    BackgroundColor="LightSlateGray" BorderColor="SlateGray" BorderWidth="5"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnOperatorClick"/>
+
+            <Button Grid.Row="3" Text="7"
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="8" 
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="9"
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+
+            <Button x:Name="btnMultiply" Grid.Row="3" Grid.Column="3" Text="*" 
+                    BackgroundColor="LightSlateGray" BorderColor="SlateGray" BorderWidth="5"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnOperatorClick"/>
+
+            <Button Grid.Row="4" Text="." 
+                    BackgroundColor="Gray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="0"
+                    BackgroundColor="DarkGray" BorderColor="LightGray" BorderWidth="3"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnNumberClick"/>
+            <Button x:Name="btnEquals" Grid.Row="4" Grid.Column="2" Text="="
+                    BackgroundColor="LightSlateGray" BorderColor="SlateGray" BorderWidth="5"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White"
+                    Clicked="CalculateResult"/>
+
+            <Button x:Name="btnDivide" Grid.Row="4" Grid.Column="3" Text="/"
+                    BackgroundColor="LightSlateGray" BorderColor="SlateGray" BorderWidth="5"
+                    FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                    Clicked="OnOperatorClick"/>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

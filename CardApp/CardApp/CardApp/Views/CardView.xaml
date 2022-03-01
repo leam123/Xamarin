@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CardApp.ViewModels"
+             x:Class="CardApp.Views.CardView">
+
+    <ContentPage.BindingContext>
+        <local:CardViewModel></local:CardViewModel>
+    </ContentPage.BindingContext>
+
+    <Grid BackgroundColor="#d3d3d3" Background="linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%)">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" BackgroundColor="Black" TextColor="White" FontSize="15"
+                x:Name="drawnNumber" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Button x:Name="draw" Text="Draw Ball" Grid.Column="1" 
+                    BackgroundColor="SandyBrown" TextColor="Brown" FontSize="16" FontAttributes="Bold"
+                    BorderColor="Black" BorderWidth="3"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0">
+                <Label Text="B" FontSize="40" 
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       TextColor="Red"/>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                <Label Text="I" FontSize="40" FontAttributes="Bold" 
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       TextColor="Yellow"/>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="2">
+                <Label Text="N" FontSize="40" FontAttributes="Bold" 
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       TextColor="Green"/>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="3">
+                <Label Text="G" FontSize="40" FontAttributes="Bold" 
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       TextColor="Violet"/>
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="4">
+                <Label Text="O" FontSize="40" FontAttributes="Bold" 
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       TextColor="Blue"/>
+            </StackLayout>
+
+        </Grid>
+        <Grid Grid.Row="2" BackgroundColor="#4d4855" Background="linear-gradient(147deg, #4d4855 0%, #000000 74%)" 
+              Padding="10" Margin="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button Grid.Row="0" Grid.Column="0"
+                    BackgroundColor="White" FontSize="20"
+                    x:Name="B1" Clicked="MarkCard"/>
+            <Button Grid.Row="0" Grid.Column="1"
+                    BackgroundColor="White" FontSize="20" 
+                    x:Name="B2" Clicked="MarkCard"/>
+            <Button Grid.Row="0" Grid.Column="2"
+                    BackgroundColor="White" FontSize="20" 
+                    x:Name="B3" Clicked="MarkCard"/>
+            <Button Grid.Row="0" Grid.Column="3"
+                    BackgroundColor="White" FontSize="20" 
+                    x:Name="B4" Clicked="MarkCard"/>
+            <Button Grid.Row="0" Grid.Column="4"
+                    BackgroundColor="White" FontSize="20" 
+                    x:Name="B5" Clicked="MarkCard"/>
+            
+            <Button Grid.Row="1" Grid.Column="0"
+                    BackgroundColor="White" FontSize="20"
+                    x:Name="I1" Clicked="MarkCard"/>
+            <Button Grid.Row="1" Grid.Column="1"
+                    BackgroundColor="White" FontSize="20"
+                    x:Name="I2" Clicked="MarkCard"/>
+            <Button Grid.Row="1" Grid.Column="2"
+                    BackgroundColor="White" FontSize="20"
+                    x:Name="I3" Clicked="MarkCard"/>
+            <Button Grid.Row="1" Grid.Column="3"
+                    BackgroundColor="White" FontSize="20"
+                    x:Name="I4" Clicked="MarkCard"/>
+            <Button Grid.Row="1" Grid.Column="4"
+                    BackgroundColor="White" FontSize="20"
+                    x:Name="I5" Clicked="MarkCard"/>
+            
+            <Button Grid.Row="2" Grid.Column="0"
+                    BackgroundColor="White" FontSize="20" x:Name="N1" Clicked="MarkCard"/>
+            <Button Grid.Row="2" Grid.Column="1"
+                    BackgroundColor="White" FontSize="20" x:Name="N2" Clicked="MarkCard"/>
+            <Button Grid.Row="2" Grid.Column="2"
+                    BackgroundColor="White" FontSize="20" x:Name="N3" Clicked="MarkCard"/>
+            <Button Grid.Row="2" Grid.Column="3"
+                    BackgroundColor="White" FontSize="20" x:Name="N4" Clicked="MarkCard"/>
+            <Button Grid.Row="2" Grid.Column="4"
+                    BackgroundColor="White" FontSize="20" x:Name="N5" Clicked="MarkCard"/>
+            
+            <Button Grid.Row="3" Grid.Column="0"
+                    BackgroundColor="White" FontSize="20" x:Name="G1" Clicked="MarkCard"/>
+            <Button Grid.Row="3" Grid.Column="1"
+                    BackgroundColor="White" FontSize="20" x:Name="G2" Clicked="MarkCard"/>
+            <Button Grid.Row="3" Grid.Column="2"
+                    BackgroundColor="White" FontSize="20" x:Name="G3" Clicked="MarkCard"/>
+            <Button Grid.Row="3" Grid.Column="3"
+                    BackgroundColor="White" FontSize="20" x:Name="G4" Clicked="MarkCard"/>
+            <Button Grid.Row="3" Grid.Column="4"
+                    BackgroundColor="White" FontSize="20" x:Name="G5" Clicked="MarkCard"/>
+
+            <Button Grid.Row="4" Grid.Column="0"
+                    BackgroundColor="White" FontSize="20" x:Name="O1" Clicked="MarkCard"/>
+            <Button Grid.Row="4" Grid.Column="1"
+                    BackgroundColor="White" FontSize="20" x:Name="O2" Clicked="MarkCard"/>
+            <Button Grid.Row="4" Grid.Column="2"
+                    BackgroundColor="White" FontSize="20" x:Name="O3" Clicked="MarkCard"/>
+            <Button Grid.Row="4" Grid.Column="3"
+                    BackgroundColor="White" FontSize="20" x:Name="O4" Clicked="MarkCard"/>
+            <Button Grid.Row="4" Grid.Column="4"
+                    BackgroundColor="White" FontSize="20" x:Name="O5" Clicked="MarkCard"/>
+        </Grid>
+        
+        <StackLayout Grid.Row="3">
+            <Button Text="BINGO!!" FontAttributes="Bold" FontSize="20" 
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    CharacterSpacing="5" Margin="3" Padding="15"
+                    BackgroundColor="#fbb034" Background="linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)"
+                    Clicked="BingoCheck"/>
+        </StackLayout>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Entry x:Name="bCode" Grid.Column="0" TextColor="Gray"/>
+            <Button x:Name="submit" Text="Submit Code"
+                    Grid.Column="1" Clicked="GetCard"/>
+        </Grid>
+
+    </Grid>
+    
+</ContentPage>
